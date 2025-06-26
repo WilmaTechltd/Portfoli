@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WilMaTech Ltd - IT Solutions & Services</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#01C8EE',secondary:'#0B4F6C',dark:'#1a1a1a'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+}
+.hero-section {
+position: relative;
+overflow: hidden;
+min-height: 600px;
+}
+.hero-video-container {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+z-index: 0;
+}
+.hero-video-container video {
+position: absolute;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+transform: translateX(-50%) translateY(-50%);
+object-fit: cover;
+}
+.hero-content {
+position: relative;
+z-index: 2;
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.service-icon {
+background: linear-gradient(135deg, #01C8EE 0%, #0B4F6C 100%);
+}
+.testimonial-card {
+background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95));
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #01C8EE;
+box-shadow: 0 0 0 3px rgba(1, 200, 238, 0.2);
+}
+.custom-checkbox {
+appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #0B4F6C;
+border-radius: 4px;
+position: relative;
+cursor: pointer;
+}
+.custom-checkbox:checked {
+background-color: #01C8EE;
+border-color: #01C8EE;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+left: 6px;
+top: 2px;
+width: 6px;
+height: 12px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-gradient-to-r from-secondary to-primary flex items-center justify-center text-white mr-3">
+<i class="ri-code-s-slash-line ri-lg"></i>
+</div>
+<h1 class="text-2xl font-['Pacifico'] text-secondary">WilMaTech <span class="text-sm font-normal align-top">Ltd</span></h1>
+</div>
+<nav class="hidden md:flex space-x-8">
+<a href="#home" class="text-gray-800 hover:text-primary font-medium">Home</a>
+<a href="#services" class="text-gray-800 hover:text-primary font-medium">Services</a>
+<a href="#portfolio" class="text-gray-800 hover:text-primary font-medium">Portfolio</a>
+<a href="#about" class="text-gray-800 hover:text-primary font-medium">About</a>
+<a href="#testimonials" class="text-gray-800 hover:text-primary font-medium">Testimonials</a>
+<a href="#contact" class="text-gray-800 hover:text-primary font-medium">Contact</a>
+</nav>
+<div class="md:hidden flex items-center">
+<button class="text-gray-700 w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section id="home" class="hero-section py-20 md:py-32 relative">
+<div class="hero-video-container">
+<video autoplay muted loop playsinline class="w-full h-full object-cover">
+<source src="https://public.readdy.ai/gen_page/it_technician_video.mp4" type="video/mp4">
+</video>
+<div class="absolute inset-0 bg-gradient-to-r from-secondary/95 to-secondary/75"></div>
+</div>
+<div class="container mx-auto px-4 w-full relative z-10">
+<div class="max-w-3xl">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Professional IT Solutions for Your Business</h1>
+<p class="text-lg text-gray-100 mb-8">Comprehensive IT services tailored to your needs. From web development to network installation, hardware troubleshooting to digital literacy training.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#contact" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition duration-300 text-center whitespace-nowrap">Get a Quote</a>
+<a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-button font-medium hover:bg-white hover:text-secondary transition duration-300 text-center whitespace-nowrap">Explore Services</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Comprehensive IT solutions designed to meet your business needs and drive digital transformation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Web Development -->
+<div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+<div class="service-icon w-16 h-16 rounded-full flex items-center justify-center text-white mb-6">
+<i class="ri-code-s-slash-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Web Development</h3>
+<p class="text-gray-600 mb-4">Custom website design and development using the latest technologies to create responsive, user-friendly websites that drive results.</p>
+<ul class="text-gray-600 mb-4 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Responsive design</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>E-commerce solutions</span>
+</li>
+<li class="flex items-start">
+
+
+</li>
+</ul>
+</div>
+<!-- IT Consultation -->
+<div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+<div class="service-icon w-16 h-16 rounded-full flex items-center justify-center text-white mb-6">
+<i class="ri-customer-service-2-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 text-gray-800">IT Consultation</h3>
+<p class="text-gray-600 mb-4">Strategic IT planning and advisory services to help your business leverage technology for growth and efficiency.</p>
+<ul class="text-gray-600 mb-4 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>IT strategy development</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Technology assessment</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Digital transformation</span>
+</li>
+</ul>
+</div>
+<!-- Network Installation -->
+<div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+<div class="service-icon w-16 h-16 rounded-full flex items-center justify-center text-white mb-6">
+<i class="ri-router-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Network Installation</h3>
+<p class="text-gray-600 mb-4">Complete network setup, configuration, and maintenance services for reliable and secure connectivity.</p>
+<ul class="text-gray-600 mb-4 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>LAN/WAN setup</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Wi-Fi optimization</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Network security</span>
+</li>
+</ul>
+</div>
+<!-- Hardware & Software -->
+<div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+<div class="service-icon w-16 h-16 rounded-full flex items-center justify-center text-white mb-6">
+<i class="ri-computer-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Hardware & Software</h3>
+<p class="text-gray-600 mb-4">Installation, troubleshooting, and maintenance of computer hardware and software systems.</p>
+<ul class="text-gray-600 mb-4 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>OS installation</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Software deployment</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Hardware upgrades</span>
+</li>
+</ul>
+</div>
+<!-- Digital Literacy -->
+<div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+<div class="service-icon w-16 h-16 rounded-full flex items-center justify-center text-white mb-6">
+<i class="ri-graduation-cap-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 text-gray-800">Digital Literacy Training</h3>
+<p class="text-gray-600 mb-4">Comprehensive training on essential digital tools and applications for personal and professional use.</p>
+<ul class="text-gray-600 mb-4 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Microsoft Office suite</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Email management</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Online services navigation</span>
+</li>
+</ul>
+</div>
+<!-- E-Government Services -->
+<div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+<div class="service-icon w-16 h-16 rounded-full flex items-center justify-center text-white mb-6">
+<i class="ri-government-line ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3 text-gray-800">E-Government Services</h3>
+<p class="text-gray-600 mb-4">Assistance with online government services, applications, and digital documentation.</p>
+<ul class="text-gray-600 mb-4 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>E-citizen account setup</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>KRA PIN application</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>HELB application assistance</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Our Portfolio</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Explore some of our recent projects and success stories that showcase our expertise.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Portfolio Item 1 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md">
+<div class="h-56 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%20responsive%20website%20design%20on%20multiple%20devices%2C%20clean%20interface%2C%20professional%20business%20website%2C%20blue%20color%20scheme%2C%20high%20quality%20design%20mockup&width=600&height=400&seq=2&orientation=landscape" alt="Web Development Project" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 text-gray-800">E-Commerce Website</h3>
+<p class="text-gray-600 mb-4">Developed a fully responsive website for WilmaTech Ltd  with ease of site navigation for the users.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Web Development</span>
+<span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">E-Commerce</span>
+
+</div>
+</div>
+</div>
+<!-- Portfolio Item 2 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md">
+<div class="h-56 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%20network%20installation%20in%20office%20environment%2C%20server%20rack%2C%20organized%20cable%20management%2C%20modern%20IT%20infrastructure%2C%20clean%20professional%20setup&width=600&height=400&seq=3&orientation=landscape" alt="Network Installation Project" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 text-gray-800">Network Infrastructure</h3>
+<p class="text-gray-600 mb-4">Designed and implemented a complete network infrastructure for Greenfield Offices, including secure Wi-Fi and VPN access.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Networking</span>
+<span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Security</span>
+<span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Infrastructure</span>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 3 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md">
+<div class="h-56 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%20IT%20training%20session%2C%20diverse%20group%20of%20people%20learning%20computer%20skills%2C%20modern%20classroom%20setting%2C%20digital%20literacy%20training%2C%20professional%20environment&width=600&height=400&seq=4&orientation=landscape" alt="Digital Literacy Training" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 text-gray-800">Digital Literacy Program</h3>
+<p class="text-gray-600 mb-4">Conducted comprehensive Microsoft Office and digital skills training for 50+ employees and students at Ramogi Institute of Advanced Technology .</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Training</span>
+<span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Microsoft Office</span>
+<span class="bg-teal-100 text-teal-800 text-xs px-3 py-1 rounded-full">Digital Skills</span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#contact" class="inline-block bg-secondary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Start Your Project</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=professional%20IT%20specialist%20working%20on%20computer%2C%20modern%20office%20environment%2C%20tech%20professional%20in%20business%20casual%20attire%2C%20focused%20on%20work%2C%20clean%20desk%20setup%20with%20multiple%20monitors&width=600&height=600&seq=5&orientation=squarish" alt="About WilMaTech" class="rounded-lg shadow-lg w-full">
+</div>
+<div class="lg:w-1/2">
+<h2 class="text-3xl font-bold text-gray-800 mb-6">About WilMaTech Ltd</h2>
+<p class="text-gray-600 mb-6">Founded in 2021, WilMaTech Ltd has been at the forefront of providing comprehensive IT solutions to businesses and individuals across the region. Our team of certified professionals brings together decades of combined experience in various IT disciplines.</p>
+<p class="text-gray-600 mb-6">We believe in a client-centered approach, taking the time to understand your unique needs before recommending solutions that align with your goals and budget. Our commitment to excellence and continuous learning ensures that we stay updated with the latest technologies and best practices.</p>
+<div class="grid grid-cols-2 gap-6 mb-8">
+<div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Our Mission</h3>
+<p class="text-gray-600">To empower businesses and individuals through accessible, reliable, and innovative IT solutions.</p>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Our Vision</h3>
+<p class="text-gray-600">To be the most trusted IT partner, driving digital transformation and technological advancement.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-3">
+<i class="ri-user-star-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">15+</h4>
+<p class="text-sm text-gray-600">Certified Experts</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-3">
+<i class="ri-customer-service-2-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">24/7</h4>
+<p class="text-sm text-gray-600">Technical Support</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-3">
+<i class="ri-building-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">200+</h4>
+<p class="text-sm text-gray-600">Clients Served</p>
+</div>
+</div>
+</div>
+<div id="locationContent" class="hidden">
+<h3 class="text-xl font-semibold mb-6 text-gray-800">Our Location</h3>
+<div class="rounded-lg overflow-hidden mb-6 h-[300px] relative">
+<img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Office Location Map" class="absolute w-full h-full object-cover">
+</div>
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-4 mt-1">
+<i class="ri-map-pin-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Physical Address</h4>
+<p class="text-gray-600">Westlands Business Park, 3rd Floor</p>
+<p class="text-gray-600">Waiyaki Way, Westlands</p>
+<p class="text-gray-600">Nairobi, Kenya</p>
+</div>
+</div>
+<a href="https://maps.google.com" target="_blank" class="inline-flex items-center text-primary hover:underline">
+<i class="ri-navigation-line mr-2"></i>
+Get Directions
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 bg-gray-50 relative">
+<div class="absolute inset-0 bg-opacity-10 bg-primary"></div>
+<div class="container mx-auto px-4 relative z-10">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Hear from businesses and individuals who have experienced our services firsthand.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="testimonial-card rounded-lg shadow-md p-8 relative">
+<div class="text-primary text-5xl absolute -top-4 -left-2 opacity-20">"</div>
+<p class="text-gray-600 mb-6 relative z-10">WilMaTech completely transformed our IT infrastructure. Their network installation service was professional and efficient, and the ongoing support has been exceptional. Our systems have never been more reliable.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+<i class="ri-user-3-line ri-lg text-gray-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Maurice M</h4>
+<p class="text-sm text-gray-600">Manager, Kenindia Assurance </p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="testimonial-card rounded-lg shadow-md p-8 relative">
+<div class="text-primary text-5xl absolute -top-4 -left-2 opacity-20">"</div>
+<p class="text-gray-600 mb-6 relative z-10">The digital literacy training provided by WilMaTech has significantly improved my productivity. Before this training, I struggled with using even the basic features of a computer. But after learning digital literacy skills, I can now comfortably type documents, use email, browse the internet safely, and even attend virtual meetings. I feel more confident and capable, not just in academics but also in applying for jobs and staying informed. This training has truly opened a new chapter in my life.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+<i class="ri-user-3-line ri-lg text-gray-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Daisy Mercy</h4>
+<p class="text-sm text-gray-600">Sudent, Tunnel Bridge Academy  </p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="testimonial-card rounded-lg shadow-md p-8 relative">
+<div class="text-primary text-5xl absolute -top-4 -left-2 opacity-20">"</div>
+<p class="text-gray-600 mb-6 relative z-10">Our e-commerce website developed by WilMaTech has exceeded our expectations. Sales have increased by 45% since launch, and the site's performance is outstanding. Their ongoing maintenance ensures everything runs smoothly.</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+<i class="ri-user-3-line ri-lg text-gray-600"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">David Sylveter </h4>
+<p class="text-sm text-gray-600">CEO, Sunrise Automobiles</p>
+</div>
+</div>
+<div id="locationContent" class="hidden">
+<h3 class="text-xl font-semibold mb-6 text-gray-800">Our Location</h3>
+<div class="rounded-lg overflow-hidden mb-6 h-[300px] relative">
+<img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Office Location Map" class="absolute w-full h-full object-cover">
+</div>
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-4 mt-1">
+<i class="ri-map-pin-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Physical Address</h4>
+<p class="text-gray-600">Westlands Business Park, 3rd Floor</p>
+<p class="text-gray-600">Waiyaki Way, Westlands</p>
+<p class="text-gray-600">Nairobi, Kenya</p>
+</div>
+</div>
+<a href="https://maps.google.com" target="_blank" class="inline-flex items-center text-primary hover:underline">
+<i class="ri-navigation-line mr-2"></i>
+Get Directions
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Have a project in mind or need IT support? Contact us today for a free consultation.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Your Name">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="emailaccount@example.com">
+</div>
+</div>
+<div>
+<label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+<input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="+254 712 344 678">
+</div>
+<div>
+<label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
+<div class="relative">
+<select id="service" class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:border-primary pr-8">
+<option value="" selected disabled>Select a service</option>
+<option value="web-development">Web Development</option>
+<option value="it-consultation">IT Consultation</option>
+<option value="network-installation">Network Installation</option>
+<option value="hardware-software">Hardware & Software</option>
+<option value="digital-literacy">Digital Literacy Training</option>
+<option value="e-government">E-Government Services</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-500"></i>
+</div>
+</div>
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Tell us about your project or requirements..."></textarea>
+</div>
+<div class="flex items-start">
+<input type="checkbox" id="privacy" class="custom-checkbox mr-3">
+<label for="privacy" class="text-sm text-gray-600">I agree to the <a href="#" class="text-primary hover:underline">Privacy Policy</a> and consent to being contacted regarding my inquiry.</label>
+</div>
+<button type="submit" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-opacity-90 transition duration-300 whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<div class="lg:w-1/2">
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm h-full">
+<div class="flex gap-4 mb-6">
+<button id="contactInfoTab" class="flex-1 py-2 px-4 bg-primary text-white rounded-full text-sm font-medium">Contact Info</button>
+</div>
+<div id="contactInfoContent">
+<h3 class="text-xl font-semibold mb-6 text-gray-800">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-4 mt-1">
+<i class="ri-map-pin-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Office Location</h4>
+<p class="text-gray-600">Westlands Business Park, <br>Nairobi, Kenya</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-4 mt-1">
+<i class="ri-phone-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Phone</h4>
+<p class="text-gray-600">+254 741 466 869 </p>
+<p class="text-gray-600">+254 721 927 524 </p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-4 mt-1">
+<i class="ri-mail-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Email</h4>
+<p class="text-gray-600">wilmatechltd.com</p>
+<p class="text-gray-600">support@wilmatech.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-4 mt-1">
+<i class="ri-time-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Business Hours</h4>
+<p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM</p>
+<p class="text-gray-600">Saturday: 9:00 AM - 1:00 PM</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="font-medium text-gray-800 mb-4">Connect With Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white hover:bg-opacity-90 transition duration-300">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white hover:bg-opacity-90 transition duration-300">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white hover:bg-opacity-90 transition duration-300">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white hover:bg-opacity-90 transition duration-300">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<div id="locationContent" class="hidden">
+<h3 class="text-xl font-semibold mb-6 text-gray-800">Our Location</h3>
+<div class="rounded-lg overflow-hidden mb-6 h-[300px] relative">
+<img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Office Location Map" class="absolute w-full h-full object-cover">
+</div>
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary mr-4 mt-1">
+<i class="ri-map-pin-line"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Physical Address</h4>
+<p class="text-gray-600">Westlands Business Park, 3rd Floor</p>
+<p class="text-gray-600">Waiyaki Way, Westlands</p>
+<p class="text-gray-600">Nairobi, Kenya</p>
+</div>
+</div>
+<a href="https://maps.google.com" target="_blank" class="inline-flex items-center text-primary hover:underline">
+<i class="ri-navigation-line mr-2"></i>
+Get Directions
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+<div>
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-secondary mr-3">
+<i class="ri-code-s-slash-line"></i>
+</div>
+<h3 class="text-xl font-['Pacifico']">WilMaTech <span class="text-xs font-normal align-top">Ltd</span></h3>
+</div>
+<p class="text-gray-300 mb-4">Your trusted partner for comprehensive IT solutions and services.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-300 hover:text-white transition duration-300">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="text-gray-300 hover:text-white transition duration-300">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="text-gray-300 hover:text-white transition duration-300">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="text-gray-300 hover:text-white transition duration-300">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+<li><a href="#services" class="text-gray-300 hover:text-white transition duration-300">Services</a></li>
+<li><a href="#portfolio" class="text-gray-300 hover:text-white transition duration-300">Portfolio</a></li>
+<li><a href="#about" class="text-gray-300 hover:text-white transition duration-300">About Us</a></li>
+<li><a href="#testimonials" class="text-gray-300 hover:text-white transition duration-300">Testimonials</a></li>
+<li><a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Web Development</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition duration-300">IT Consultation</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Network Installation</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Hardware & Software</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Digital Literacy</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition duration-300">E-Government Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+<p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and offers.</p>
+<form class="space-y-3">
+<div class="relative">
+<input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded border-none text-gray-800 text-sm">
+<button type="submit" class="absolute right-1 top-1 bg-primary text-white px-3 py-1 rounded !rounded-button text-sm whitespace-nowrap">Subscribe</button>
+</div>
+</form>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-700 text-center md:flex md:justify-between md:items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 WilMaTech Ltd. All rights reserved.</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('.md\\:hidden button');
+const mobileMenu = document.createElement('div');
+mobileMenu.className = 'fixed inset-0 bg-gray-900 bg-opacity-50 z-50 hidden';
+mobileMenu.innerHTML = `
+<div class="bg-white h-full w-64 p-6 shadow-lg transform transition-transform -translate-x-full">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-['Pacifico'] text-secondary">WilMaTech</h3>
+<button class="text-gray-700 w-8 h-8 flex items-center justify-center close-menu">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<nav class="space-y-4">
+<a href="#home" class="block py-2 text-gray-800 hover:text-primary font-medium border-b border-gray-100">Home</a>
+<a href="#services" class="block py-2 text-gray-800 hover:text-primary font-medium border-b border-gray-100">Services</a>
+<a href="#portfolio" class="block py-2 text-gray-800 hover:text-primary font-medium border-b border-gray-100">Portfolio</a>
+<a href="#about" class="block py-2 text-gray-800 hover:text-primary font-medium border-b border-gray-100">About</a>
+<a href="#testimonials" class="block py-2 text-gray-800 hover:text-primary font-medium border-b border-gray-100">Testimonials</a>
+<a href="#contact" class="block py-2 text-gray-800 hover:text-primary font-medium">Contact</a>
+</nav>
+</div>
+`;
+document.body.appendChild(mobileMenu);
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('hidden');
+const menuPanel = mobileMenu.querySelector('div');
+setTimeout(() => {
+menuPanel.classList.remove('-translate-x-full');
+}, 10);
+});
+mobileMenu.querySelector('.close-menu').addEventListener('click', function() {
+const menuPanel = mobileMenu.querySelector('div');
+menuPanel.classList.add('-translate-x-full');
+setTimeout(() => {
+mobileMenu.classList.add('hidden');
+}, 300);
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+link.addEventListener('click', function() {
+const menuPanel = mobileMenu.querySelector('div');
+menuPanel.classList.add('-translate-x-full');
+setTimeout(() => {
+mobileMenu.classList.add('hidden');
+}, 300);
+});
+});
+});
+</script>
+<script id="location-tab-script">
+document.addEventListener('DOMContentLoaded', function() {
+const contactInfoTab = document.getElementById('contactInfoTab');
+const locationTab = document.getElementById('locationTab');
+const contactInfoContent = document.getElementById('contactInfoContent');
+const locationContent = document.getElementById('locationContent');
+function switchTab(showContact) {
+if (showContact) {
+contactInfoTab.classList.remove('bg-gray-200', 'text-gray-600');
+contactInfoTab.classList.add('bg-primary', 'text-white');
+locationTab.classList.remove('bg-primary', 'text-white');
+locationTab.classList.add('bg-gray-200', 'text-gray-600');
+contactInfoContent.classList.remove('hidden');
+locationContent.classList.add('hidden');
+} else {
+locationTab.classList.remove('bg-gray-200', 'text-gray-600');
+locationTab.classList.add('bg-primary', 'text-white');
+contactInfoTab.classList.remove('bg-primary', 'text-white');
+contactInfoTab.classList.add('bg-gray-200', 'text-gray-600');
+locationContent.classList.remove('hidden');
+contactInfoContent.classList.add('hidden');
+}
+}
+contactInfoTab.addEventListener('click', () => switchTab(true));
+locationTab.addEventListener('click', () => switchTab(false));
+});
+</script>
+<script id="form-validation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.querySelector('#contact form');
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+// Simple validation
+let isValid = true;
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const privacy = document.getElementById('privacy');
+if (!name.value.trim()) {
+isValid = false;
+name.classList.add('border-red-500');
+} else {
+name.classList.remove('border-red-500');
+}
+if (!email.value.trim() || !email.value.includes('@')) {
+isValid = false;
+email.classList.add('border-red-500');
+} else {
+email.classList.remove('border-red-500');
+}
+if (!message.value.trim()) {
+isValid = false;
+message.classList.add('border-red-500');
+} else {
+message.classList.remove('border-red-500');
+}
+if (!privacy.checked) {
+isValid = false;
+privacy.parentElement.classList.add('text-red-500');
+} else {
+privacy.parentElement.classList.remove('text-red-500');
+}
+if (isValid) {
+// Simulate form submission
+const submitButton = contactForm.querySelector('button[type="submit"]');
+const originalText = submitButton.textContent;
+submitButton.disabled = true;
+submitButton.textContent = 'Sending...';
+setTimeout(() => {
+alert('Thank you for your message! We will get back to you soon.');
+contactForm.reset();
+submitButton.disabled = false;
+submitButton.textContent = originalText;
+}, 1500);
+}
+});
+}
+});
+</script>
+</body>
+</html>
